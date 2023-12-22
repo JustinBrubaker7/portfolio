@@ -2,3 +2,29 @@
 @import 'tailwindcss/components';
 @import './prism.css';
 @import 'tailwindcss/utilities';
+
+.bouncing-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: bounce 1s infinite;
+}
+
+.bouncing-arrow svg {
+  fill: currentColor; /* Adjust color if needed */
+  width: 24px; /* Adjust size if needed */
+}
+
+.bouncing-arrow span {
+  margin-bottom: 8px; /* Adjust spacing if needed */
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
