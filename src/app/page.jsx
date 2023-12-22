@@ -140,8 +140,8 @@ function Newsletter() {
         <span className="ml-3">Reach Out</span>
       </h2>
       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Want to get in touch? I'd love to hear from you. Send me a message and
-        I'll respond as soon as possible.
+        Want to get in touch? I&apos;d love to hear from you. Send me a message
+        and I&apos;ll respond as soon as possible.
       </p>
       <div className="mt-6 flex">
         <input
@@ -300,7 +300,7 @@ function Skillz() {
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
-          <li className="flex gap-4">
+          <li key={roleIndex} className="flex gap-4">
             {role.logo && (
               <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full  bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50  dark:ring-0">
                 <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
@@ -431,9 +431,9 @@ export default async function Home() {
             and hosting local developer groups, sharing knowledge and
             experiences. As an Arizona resident, I embrace the spirit of
             adventure, often exploring new horizons with my two weiner dogs in
-            tow. Whether it's traversing the landscapes in our RV or delving
-            into new learning experiences, I'm constantly seeking growth and
-            adventure in every aspect of life.
+            tow. Whether it&apos;s traversing the landscapes in our RV or
+            delving into new learning experiences, I&apos;m constantly seeking
+            growth and adventure in every aspect of life.
           </p>
           <div className="mt-6 flex gap-6">
             {/* <SocialLink
