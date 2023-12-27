@@ -10,23 +10,14 @@ function Article({ article }) {
         <Card.Title href={`/articles/${article.slug}`}>
           {article.title}
         </Card.Title>
-        <Card.Eyebrow
-          as="time"
-          dateTime={article.date}
-          className="md:hidden"
-          decorate
-        >
-          {formatDate(article.date)}
+        <Card.Eyebrow as="text" className="md:hidden" decorate>
+          {article.projectType}
         </Card.Eyebrow>
         <Card.Description>{article.description}</Card.Description>
         <Card.Cta>Read article</Card.Cta>
       </Card>
-      <Card.Eyebrow
-        as="time"
-        dateTime={article.date}
-        className="mt-1 hidden md:block"
-      >
-        {formatDate(article.date)}
+      <Card.Eyebrow as="text" className="mt-1 hidden md:block">
+        {article.projectType}
       </Card.Eyebrow>
     </article>
   )

@@ -9,13 +9,14 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/portrait2.jpg' // Assuming this is your portrait
 
 function SocialLink({ className, href, children, icon: Icon }) {
   return (
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
+        target="_blank"
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-teal-500" />
@@ -39,7 +40,7 @@ function MailIcon(props) {
 export const metadata = {
   title: 'About',
   description:
-    'I’m Justin Brubaker. I live in New York City, where I design the future.',
+    'I’m Justin Brubaker, a seasoned Full Stack Developer and Team Lead. I live in the Greater Phoenix Area, where I innovate in the fields of distribution and aviation through technology.',
 }
 
 export default function About() {
@@ -50,66 +51,90 @@ export default function About() {
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src={portraitImage}
-              alt=""
+              alt="Justin Brubaker"
               sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800 md:aspect-auto"
             />
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            I’m Justin Brubaker. I live in the Greater Phoenix Area, dedicated
+            to mastering software development and championing team advancement
+            in the tech industry
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              My journey began in a non-profit environment, sparking my interest
+              in technology's power to drive positive change. This experience
+              laid the foundation for my career in software engineering, where I
+              specialize in fullstack development and have spent considerable
+              time with integration technologies, particularly Salesforce and
+              its ecosystem.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              As a Lead Engineer, my expertise lies in React.js, Node.js, and
+              MySQL crafting robust applications that enhance connectivity,
+              automation with AI and streamline business processes. My role
+              transcends coding; I'm now a mentor and leader, fostering
+              innovation and guiding teams to exceed business objectives.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              My professional journey has evolved significantly over time,
+              leading me from the role of Front End Developer at OneTrust Home
+              Loans to my current position as Lead Software Engineer at Bytrek.
+              In this pivotal role, I have grown from an individual contributor
+              to leading a team of seven talented engineers. Our focus is on
+              aviation and distribution, with a special emphasis on
+              integrations, particularly within the Salesforce ecosystem. This
+              experience has allowed me to further refine my skills in software
+              engineering, team leadership, and strategic project management,
+              continually driving innovation and excellence in our field.
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              Today, my commitment to technology is unwavering, as I continue to
+              adapt and solve complex challenges, leading projects that push the
+              boundaries of what's possible in tech-driven environments.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={TwitterIcon}>
+            {/* <SocialLink
+              href="https://twitter.com/yourhandle"
+              icon={TwitterIcon}
+            >
               Follow on Twitter
             </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
+            <SocialLink
+              href="https://instagram.com/yourhandle"
+              icon={InstagramIcon}
+              className="mt-4"
+            >
               Follow on Instagram
-            </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            </SocialLink> */}
+            <SocialLink
+              href="https://github.com/JustinBrubaker7"
+              target="_blank"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+            <SocialLink
+              href="https://www.linkedin.com/in/brubakerjustin/"
+              target="_blank"
+              icon={LinkedInIcon}
+              className="mt-4"
+            >
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="mailto:justinbrubaker7@gmail.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              justinbrubaker7@gmail.com
             </SocialLink>
           </ul>
         </div>

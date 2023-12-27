@@ -22,6 +22,13 @@ import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
+import image6 from '@/images/photos/andras-vas-Bd7gNnWJBkU-unsplash.jpg'
+import image7 from '@/images/photos/christopher-gower-m_HRfLhgABo-unsplash.jpg'
+import image8 from '@/images/photos/ben-kolde-bs2Ba7t69mM-unsplash.jpg'
+import image9 from '@/images/photos/christopher-gower-vjMgqUkS8q8-unsplash.jpg'
+import image10 from '@/images/photos/diego-ph-fIq0tET6llw-unsplash.jpg'
+import image11 from '@/images/photos/ilya-pavlov-OqtafYT5kTw-unsplash.jpg'
+
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -335,7 +342,23 @@ function Photos() {
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+              'relative hidden aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:block dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+              rotations[imageIndex % rotations.length],
+            )}
+          >
+            <Image
+              src={image}
+              alt=""
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+        ))}
+        {[image7, image10, image9, image8, image11].map((image, imageIndex) => (
+          <div
+            key={image.src}
+            className={clsx(
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:hidden  dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
               rotations[imageIndex % rotations.length],
             )}
           >
