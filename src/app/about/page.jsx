@@ -59,18 +59,18 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I’m Justin Brubaker. I live in the Greater Phoenix Area, dedicated
-            to mastering software development and championing team advancement
-            in the tech industry
+            I&apos;m Justin Brubaker. I live in the Greater Phoenix Area,
+            dedicated to mastering software development and championing team
+            advancement in the tech industry
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
               My journey began in a non-profit environment, sparking my interest
-              in technology's power to drive positive change. This experience
-              laid the foundation for my career in software engineering, where I
-              specialize in fullstack development and have spent considerable
-              time with integration technologies, particularly Salesforce and
-              its ecosystem.
+              in technology&apos;s power to drive positive change. This
+              experience laid the foundation for my career in software
+              engineering, where I specialize in fullstack development and have
+              spent considerable time with integration technologies,
+              particularly Salesforce and its ecosystem.
             </p>
             <p>
               As a Lead Engineer, my expertise lies in React.js, Node.js, and
@@ -94,7 +94,7 @@ export default function About() {
             <p>
               Today, my commitment to technology is unwavering, as I continue to
               adapt and solve complex challenges, leading projects that push the
-              boundaries of what's possible in tech-driven environments.
+              boundaries of what&apos;s possible in tech-driven environments.
             </p>
           </div>
         </div>
