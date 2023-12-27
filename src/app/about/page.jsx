@@ -76,7 +76,7 @@ export default function About() {
               As a Lead Engineer, my expertise lies in React.js, Node.js, and
               MySQL crafting robust applications that enhance connectivity,
               automation with AI and streamline business processes. My role
-              transcends coding; I'm now a mentor and leader, fostering
+              transcends coding; I&apos;m now a mentor and leader, fostering
               innovation and guiding teams to exceed business objectives.
             </p>
             <p>
