@@ -405,7 +405,7 @@ function Interests() {
   ]
 
   return (
-    <div className="hidden rounded-2xl border border-zinc-100 p-6 dark:block dark:border-zinc-700/40">
+    <div className=" rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Interests</span>
@@ -500,8 +500,8 @@ export default async function Home() {
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Newsletter />
             <Resume />
-            <Interests />
             <Skillz />
+            <Interests />
           </div>
         </div>
       </Container>
