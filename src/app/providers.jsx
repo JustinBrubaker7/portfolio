@@ -18,9 +18,22 @@ function ThemeWatcher() {
   let { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {
-    // Always set the theme to 'light', regardless of system preferences
-    setTheme('light')
-  }, [setTheme])
+    let media = window.matchMedia('(prefers-color-scheme: dark)')
+
+    function onMediaChange() {
+      let systemTheme = media.matches ? 'dark' : 'light'
+      if (resolvedTheme === systemTheme) {
+        setTheme('system')
+      }
+    }
+
+    onMediaChange()
+    media.addEventListener('change', onMediaChange)
+
+    return () => {
+      media.removeEventListener('change', onMediaChange)
+    }
+  }, [resolvedTheme, setTheme])
 
   return null
 }
