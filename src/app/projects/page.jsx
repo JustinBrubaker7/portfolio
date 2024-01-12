@@ -24,7 +24,7 @@ const projects = [
     description:
       'Creating a semantic search engine for a Vector Database, a database of the bible. This is coming soon.',
     link: {
-      href: 'https://github.com/JustinBrubaker7/gpt-power-user',
+      href: 'https://github.com/JustinBrubaker7/vector-search',
       label: 'Github',
     },
     logo: logoHelioStream,
