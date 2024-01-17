@@ -77,7 +77,7 @@ export default function About() {
               MySQL crafting robust applications that enhance connectivity,
               automation with AI and streamline business processes. My role
               transcends coding; I&apos;m now a mentor and leader, fostering
-              innovation and guiding teams to exceed business objectives.
+              innovation and guiding others to exceed business objectives.
             </p>
             <p>
               My professional journey has evolved significantly over time,
