@@ -379,7 +379,7 @@ function Interests() {
   let resume = [
     {
       company: 'Software Developers of the East Valley',
-      title: 'Organizer and Member',
+      title: 'Organizer and Host',
       link: 'https://www.meetup.com/software-developers-of-the-east-valley-gilbert-queen-creek/',
       start: '2022',
       end: {
