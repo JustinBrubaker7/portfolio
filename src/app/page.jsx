@@ -430,13 +430,11 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:hidden dark:text-zinc-100 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Software Developer, Leader, Advocate for Team Growth.
           </h1>
-          <h1 className="hidden text-4xl font-bold tracking-tight text-zinc-800 dark:block dark:text-zinc-100 sm:text-5xl">
-            Husband, Father, Explorer, Coffee Lover.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:hidden dark:text-zinc-400">
+
+          <p className="mt-6 text-base text-zinc-600  dark:text-zinc-400">
             As a seasoned software developer with experience stretching back to
             2017, I specialize in creating dynamic and efficient solutions using
             a robust skill set that includes React, JavaScript, Node.js, MySQL,
@@ -448,7 +446,7 @@ export default async function Home() {
             dedication not only drives my continual learning but also enriches
             the teams and projects I am privileged to lead.
           </p>
-          <p className="mt-6 hidden text-base text-zinc-600 dark:block dark:text-zinc-400">
+          {/* <p className="mt-6 hidden text-base text-zinc-600 dark:block dark:text-zinc-400">
             Balancing a fulfilling personal life, I cherish quality time with my
             wife and daughter, fostering strong family bonds. Actively involved
             in our church, I find joy and purpose in serving the community. My
@@ -459,7 +457,7 @@ export default async function Home() {
             tow. Whether it&apos;s traversing the landscapes in our RV or
             delving into new learning experiences, I&apos;m constantly seeking
             growth and adventure in every aspect of life.
-          </p>
+          </p> */}
           <div className="mt-6 flex gap-6">
             {/* <SocialLink
               href="https://twitter.com"
