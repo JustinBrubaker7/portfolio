@@ -7,6 +7,8 @@ import { usePathname } from 'next/navigation'
 import { useTheme } from 'next-themes'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
+// import headshot from '@/images/photos/1702527232967.webp'
+import headshot from '@/images/1702527232967.webp'
 
 import { Container } from '@/components/Container'
 
@@ -227,9 +229,7 @@ function Avatar({ large = false, className, ...props }) {
       {...props}
     >
       <Image
-        src={
-          'https://media.licdn.com/dms/image/D5603AQG_XHvYI-s-5w/profile-displayphoto-shrink_200_200/0/1702527232967?e=1708560000&v=beta&t=n0JpUklTH6YUZKaWv05LFAMh17CSTehouyGdrh4XMEg'
-        }
+        src={headshot}
         alt=""
         width={large ? 64 : 36}
         height={large ? 64 : 36}
