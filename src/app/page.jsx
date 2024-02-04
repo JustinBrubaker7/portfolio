@@ -444,7 +444,7 @@ export default async function Home() {
             professional journey is a deep passion for contributing to
             meaningful causes and nurturing the growth of new developers. This
             dedication not only drives my continual learning but also enriches
-            the teams and projects I am privileged to lead.
+            the teams and projects I am privileged to be apart of.
           </p>
           {/* <p className="mt-6 hidden text-base text-zinc-600 dark:block dark:text-zinc-400">
             Balancing a fulfilling personal life, I cherish quality time with my
