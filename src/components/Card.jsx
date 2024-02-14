@@ -14,27 +14,34 @@ function ChevronRightIcon(props) {
   )
 }
 
-export function Card({ as, className, children }) {
-  let Component = as ?? 'div'
+export function Card({ as = 'div', className, children }) {
+  // Using 'as' prop to determine the component type, defaulting to 'div'
+  let Component = as
 
   return (
     <Component
-      className={clsx(className, 'group relative flex flex-col items-start')}
+      className={clsx(
+        'group relative flex flex-col items-start rounded-lg p-6',
+        'ring-1 ring-zinc-900/5 transition-shadow hover:shadow-md',
+        'dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0',
+        'h-full justify-between', // Ensure content is spaced between and card takes full height
+        className, // Allow custom styles passed through className prop
+      )}
     >
       {children}
     </Component>
   )
 }
 
-Card.Link = function CardLink({ children, ...props }) {
+Card.Link = function CardLink({ className, children, ...props }) {
   return (
-    <>
-      <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
-      <Link {...props}>
-        <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
-        <span className="relative z-10">{children}</span>
-      </Link>
-    </>
+    <Link {...props}>
+      <div
+        className={`inline-block text-zinc-800 hover:text-teal-500 dark:text-zinc-100 dark:hover:text-teal-400 ${className}`}
+      >
+        {children}
+      </div>
+    </Link>
   )
 }
 
@@ -60,7 +67,7 @@ Card.Cta = function CardCta({ children }) {
   return (
     <div
       aria-hidden="true"
-      className="relative z-10 mt-4 flex items-center text-sm font-medium text-yellow-400"
+      className="relative z-10 mt-4 flex items-center text-sm font-medium text-emerald-700"
     >
       {children}
       <ChevronRightIcon className="ml-1 h-4 w-4 stroke-current" />

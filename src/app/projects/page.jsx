@@ -13,20 +13,32 @@ const projects = [
     name: 'Power GPT',
     description:
       'A new interface for the GPT tool suite with a focus on the power users.',
-    link: {
-      href: 'https://github.com/JustinBrubaker7/gpt-power-user',
-      label: 'Github',
-    },
+    links: [
+      {
+        href: 'https://github.com/JustinBrubaker7/gpt-power-user',
+        label: 'GitHub',
+      },
+      {
+        href: 'https://gptpower.netlify.app/',
+        label: 'Live Site',
+      },
+    ],
     logo: PowerGPTLogo,
   },
   {
     name: 'Vector Database Semantic Search',
     description:
       'Creating a semantic search engine for a Vector Database, a database of the bible. This is coming soon.',
-    link: {
-      href: 'https://github.com/JustinBrubaker7/vector-search',
-      label: 'Github',
-    },
+    links: [
+      {
+        href: 'https://github.com/JustinBrubaker7/vector-search',
+        label: 'Github',
+      },
+      {
+        href: 'https://vector.justinbrubaker.dev/',
+        label: 'Live Site',
+      },
+    ],
     logo: logoHelioStream,
   },
   {
@@ -34,10 +46,12 @@ const projects = [
     description:
       "Simplify Your Relationship One message at a time We send you text messages (or 'sparks'), that rekindle those early relationship moments, capturing the magic and reigniting the romance",
 
-    link: {
-      href: 'https://sparktexts.co/',
-      label: 'SparkTexts.co',
-    },
+    links: [
+      {
+        href: 'https://sparktexts.co/',
+        label: 'SparkTexts.co',
+      },
+    ],
     logo: SparkLogo,
   },
   {
@@ -45,10 +59,12 @@ const projects = [
     description:
       "A template for a full stack auth and portal system. It's built with React.js, Node,js, MySQL, JWT and Tailwind css.",
 
-    link: {
-      href: 'https://github.com/JustinBrubaker7/fullstack-auth-portal-template',
-      label: 'Github',
-    },
+    links: [
+      {
+        href: 'https://github.com/JustinBrubaker7/fullstack-auth-portal-template',
+        label: 'Github',
+      },
+    ],
     logo: logoAnimaginary,
   },
 ]
@@ -90,13 +106,22 @@ export default function Projects() {
               />
             </div>
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-              <Card.Link href={project.link.href}>{project.name}</Card.Link>
+              {project.name}
             </h2>
             <Card.Description>{project.description}</Card.Description>
-            <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
-              <LinkIcon className="h-6 w-6 flex-none" />
-              <span className="ml-2">{project.link.label}</span>
-            </p>
+            <div className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition  dark:text-zinc-200">
+              {project.links.map((link, index) => (
+                <div
+                  key={index}
+                  className="mr-4 flex items-center hover:text-teal-500 hover:underline dark:hover:text-teal-400"
+                >
+                  <LinkIcon className="-mr-2 h-6 w-6 flex-none" />
+                  <Card.Link href={link.href} target="_blank" className="ml-2">
+                    {link.label}
+                  </Card.Link>
+                </div>
+              ))}
+            </div>
           </Card>
         ))}
       </ul>
