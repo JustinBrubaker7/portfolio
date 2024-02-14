@@ -439,7 +439,7 @@ export default async function Home() {
   let articles = (await getAllArticles()).slice(0, 4)
   const certifications = [
     {
-      name: 'Full Stack Web Development Development',
+      name: 'Full Stack Web Development',
       link: 'https://bootcamp.extension.ucr.edu/coding/',
       date: 'Full Stack Development',
     },
