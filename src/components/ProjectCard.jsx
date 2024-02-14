@@ -50,7 +50,7 @@ ProjectCard.Title = function CardTitle({ as, href, children }) {
 
   return (
     <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-      {href ? <Card.Link href={href}>{children}</Card.Link> : children}
+      {href ? <ProjectCard.Link href={href}>{children}</ProjectCard.Link> : children}
     </Component>
   )
 }
