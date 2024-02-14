@@ -128,6 +128,18 @@ function Article({ article }) {
   )
 }
 
+function Certs({ certification }) {
+  return (
+    <Card as="article">
+      <Card.Title href={certification.link}>{certification.name}</Card.Title>
+      <Card.Eyebrow as="text" decorate>
+        {certification.date}
+      </Card.Eyebrow>
+      <Card.Cta>View Certification</Card.Cta>
+    </Card>
+  )
+}
+
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" target="_blank" {...props}>
@@ -425,6 +437,23 @@ function Interests() {
 
 export default async function Home() {
   let articles = (await getAllArticles()).slice(0, 4)
+  const certifications = [
+    {
+      name: 'Full Stack Web Development Development',
+      link: 'https://bootcamp.extension.ucr.edu/coding/',
+      date: 'Full Stack Development',
+    },
+    {
+      name: 'Github Foundations',
+      link: 'https://www.credly.com/badges/fe1be74b-7abe-4c85-9183-b767810eee7a/public_url',
+      date: 'Github',
+    },
+    {
+      name: 'Google Project Management',
+      link: 'https://www.coursera.org/professional-certificates/google-project-management',
+      date: 'Project Management',
+    },
+  ]
 
   return (
     <>
@@ -486,13 +515,26 @@ export default async function Home() {
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div>
-            <h3 className="pb-8 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
-              Projects
-            </h3>
-            <div className="flex flex-col gap-16">
-              {articles.map((article) => (
-                <Article key={article.slug} article={article} />
-              ))}
+            <div>
+              <h3 className="pb-8 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+                Projects
+              </h3>
+              <div className="flex flex-col gap-16">
+                {articles.map((article) => (
+                  <Article key={article.slug} article={article} />
+                ))}
+              </div>
+            </div>
+            <div>
+              <hr className="mb-16 mt-16 border-t border-zinc-100 dark:border-zinc-700/40" />
+              <h3 className="pb-8 text-2xl font-semibold text-zinc-800 dark:text-zinc-100">
+                Professional Certifications
+              </h3>
+              <div className="flex flex-col gap-16">
+                {certifications.map((cert) => (
+                  <Certs key={cert.name} certification={cert} />
+                ))}
+              </div>
             </div>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
