@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import { Card } from '@/components/Card'
+import { ProjectCard } from '@/components/ProjectCard'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import SparkLogo from '@/images/logos/Spark.jpg'
@@ -96,7 +96,7 @@ export default function Projects() {
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
       >
         {projects.map((project) => (
-          <Card as="li" key={project.name}>
+          <ProjectCard as="li" key={project.name}>
             <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-white dark:ring-0">
               <Image
                 src={project.logo}
@@ -108,7 +108,9 @@ export default function Projects() {
             <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
               {project.name}
             </h2>
-            <Card.Description>{project.description}</Card.Description>
+            <ProjectCard.Description>
+              {project.description}
+            </ProjectCard.Description>
             <div className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition  dark:text-zinc-200">
               {project.links.map((link, index) => (
                 <div
@@ -116,13 +118,17 @@ export default function Projects() {
                   className="mr-4 flex items-center hover:text-teal-500 hover:underline dark:hover:text-teal-400"
                 >
                   <LinkIcon className="-mr-2 h-6 w-6 flex-none" />
-                  <Card.Link href={link.href} target="_blank" className="ml-2">
+                  <ProjectCard.Link
+                    href={link.href}
+                    target="_blank"
+                    className="ml-2"
+                  >
                     {link.label}
-                  </Card.Link>
+                  </ProjectCard.Link>
                 </div>
               ))}
             </div>
-          </Card>
+          </ProjectCard>
         ))}
       </ul>
     </SimpleLayout>
