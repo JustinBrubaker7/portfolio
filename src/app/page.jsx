@@ -265,7 +265,7 @@ function Resume() {
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-200/50 bg-zinc-50/25 p-6 shadow-sm  dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work History</span>
@@ -314,7 +314,7 @@ function Skillz() {
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6  dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-200/50 bg-zinc-50/25 p-6 shadow-sm  dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <CodeIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Featured Technical Skills</span>
@@ -417,7 +417,7 @@ function Interests() {
   ]
 
   return (
-    <div className=" rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+    <div className=" rounded-2xl border border-zinc-200/50 bg-zinc-50/25 p-6 shadow-sm  dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Interests</span>
@@ -439,7 +439,7 @@ export default async function Home() {
   let articles = (await getAllArticles()).slice(0, 4)
   const certifications = [
     {
-      name: 'Full Stack Web Development',
+      name: 'University California Riverside: Full Stack Web Development',
       link: 'https://bootcamp.extension.ucr.edu/coding/',
       date: 'Full Stack Development',
     },
