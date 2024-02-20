@@ -251,7 +251,7 @@ function Resume() {
       logo: othlLogo,
       start: '2021',
       end: {
-        label: 'Present',
+        label: '2023',
         dateTime: new Date().getFullYear().toString(),
       },
     },
@@ -265,7 +265,7 @@ function Resume() {
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-200/50 bg-zinc-50/25 p-6 shadow-sm  dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-200/50 bg-zinc-50/25 p-6 shadow-sm dark:border-zinc-700/50  dark:bg-zinc-600/25">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Work History</span>
@@ -276,7 +276,7 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="https://drive.google.com/file/d/1Ef8hV1Aljk107v6iTU4BtWnayJAp9pBO/view?usp=drive_link"
+        href="https://drive.google.com/file/d/1ofDftjXxsFIp_-xx-7q-4SKGHHSGLo9_/view?usp=sharing"
         variant="secondary"
         className="group mt-6 w-full"
         target="_blank"
@@ -314,7 +314,7 @@ function Skillz() {
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-200/50 bg-zinc-50/25 p-6 shadow-sm  dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-200/50 bg-zinc-50/25 p-6 shadow-sm  dark:border-zinc-700/40 dark:bg-zinc-600/25">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <CodeIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Featured Technical Skills</span>
@@ -417,7 +417,7 @@ function Interests() {
   ]
 
   return (
-    <div className=" rounded-2xl border border-zinc-200/50 bg-zinc-50/25 p-6 shadow-sm  dark:border-zinc-700/40">
+    <div className=" rounded-2xl border border-zinc-200/50 bg-zinc-50/25 p-6 shadow-sm  dark:border-zinc-700/40 dark:bg-zinc-600/25">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Interests</span>
