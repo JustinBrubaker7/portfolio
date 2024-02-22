@@ -23,6 +23,15 @@ const projects = [
         label: 'Live Site',
       },
     ],
+    stack: [
+      'Vite',
+      'React',
+      'Web Sockets',
+      'Tailwind CSS',
+      'Node.js',
+      'MySQL',
+      'Authentication',
+    ],
     logo: PowerGPTLogo,
   },
   {
@@ -39,6 +48,7 @@ const projects = [
         label: 'Live Site',
       },
     ],
+    stack: ['Pinecone DB', 'Embedding Models', 'HTMX', 'Python (Plotly)'],
     logo: logoHelioStream,
   },
   {
@@ -52,6 +62,7 @@ const projects = [
         label: 'SparkTexts.co',
       },
     ],
+    stack: ['Saas', 'Framer', 'React', 'Node.js', 'Plivo', 'Stripe'],
     logo: SparkLogo,
   },
   {
@@ -65,6 +76,7 @@ const projects = [
         label: 'Github',
       },
     ],
+    stack: ['React', 'Node.js', 'MySQL', 'JWT', 'Tailwind CSS'],
     logo: logoAnimaginary,
   },
 ]
@@ -111,6 +123,7 @@ export default function Projects() {
             <ProjectCard.Description>
               {project.description}
             </ProjectCard.Description>
+            <ProjectCard.TechStack>{project?.stack}</ProjectCard.TechStack>
             <div className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition  dark:text-zinc-200">
               {project.links.map((link, index) => (
                 <div

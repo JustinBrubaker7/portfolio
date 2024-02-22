@@ -50,7 +50,11 @@ ProjectCard.Title = function CardTitle({ as, href, children }) {
 
   return (
     <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-      {href ? <ProjectCard.Link href={href}>{children}</ProjectCard.Link> : children}
+      {href ? (
+        <ProjectCard.Link href={href}>{children}</ProjectCard.Link>
+      ) : (
+        children
+      )}
     </Component>
   )
 }
@@ -60,6 +64,21 @@ ProjectCard.Description = function CardDescription({ children }) {
     <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
       {children}
     </p>
+  )
+}
+
+ProjectCard.TechStack = function CardTechStack({ children }) {
+  return (
+    <ul className="relative z-10 mt-2 flex flex-wrap gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+      {children?.map((tech, index) => (
+        <li
+          key={index}
+          className="rounded-md bg-zinc-100 px-2 py-1 dark:bg-zinc-700/50"
+        >
+          {tech}
+        </li>
+      ))}
+    </ul>
   )
 }
 
