@@ -37,7 +37,7 @@ const projects = [
   {
     name: 'Vector Database Semantic Search',
     description:
-      'Creating a semantic search engine for a Vector Database, a database of the bible. This is coming soon.',
+      'Creating a semantic search engine for a Vector Database, a database of the bible. Search the bible by the meaning of the text, not just the words.',
     links: [
       {
         href: 'https://github.com/JustinBrubaker7/vector-search',
