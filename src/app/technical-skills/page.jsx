@@ -1,5 +1,10 @@
-import React, { useState } from 'react'
+import dynamic from 'next/dynamic'
+import React from 'react'
 import { SimpleLayout } from '@/components/SimpleLayout'
+
+const SearchBox = dynamic(() => import('./SearchBox.client.jsx'), {
+  ssr: false,
+})
 
 export const metadata = {
   title: 'Technical Skills',
@@ -73,39 +78,16 @@ const categories = {
 }
 
 export default function TechnicalSkills() {
-  const [searchTerm, setSearchTerm] = useState('')
-
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value.toLowerCase())
-  }
-
-  const filteredCategories = Object.entries(categories).reduce(
-    (acc, [category, technologies]) => {
-      const filteredTechnologies = technologies.filter((technology) =>
-        technology.toLowerCase().includes(searchTerm),
-      )
-      if (filteredTechnologies.length > 0) {
-        acc[category] = filteredTechnologies
-      }
-      return acc
-    },
-    {},
-  )
   return (
     <SimpleLayout
       title="Technical Skills"
       intro="I have experience with a wide range of technologies and tools with a focus on the Javascript ecosystem but continuing to grow in new ways. Here is an exhaustive list of the languages, frameworks, tools, and tech I've used."
     >
-      <input
-        type="text"
-        placeholder="Search technologies..."
-        className="mb-6 w-full rounded-md border-gray-300 px-4 py-2 text-gray-700 focus:border-indigo-500 focus:ring-indigo-500"
-        onChange={handleSearchChange}
-      />
+      <SearchBox allTerms={Object.values(categories).flat()} />
       <div>
         {Object.entries(categories).map(([category, technologies]) => (
           <div key={category} className="mb-12 flex flex-col gap-2">
-            <h2 className="my-4 text-2xl font-bold tracking-tight text-gray-200 sm:text-3xl lg:text-4xl">
+            <h2 className="my-4 text-2xl font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:text-3xl lg:text-4xl">
               {category}
             </h2>
             <ul
@@ -113,7 +95,10 @@ export default function TechnicalSkills() {
               className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4"
             >
               {technologies.map((technology) => (
-                <li className="text-gray-300" key={technology}>
+                <li
+                  className="text-gray-600 dark:text-gray-300 "
+                  key={technology}
+                >
                   {technology}
                 </li>
               ))}
