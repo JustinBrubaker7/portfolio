@@ -338,7 +338,13 @@ function Skillz() {
         ))}
       </ol>
       <p className="mt-6 text-sm italic text-zinc-400 dark:text-zinc-400 ">
-        For a full list view my resume
+        For a full list view{' '}
+        <a
+          className="text-zinc-500 underline transition hover:text-zinc-600 dark:text-zinc-300 dark:hover:text-zinc-200"
+          href="/technical-skills"
+        >
+          here
+        </a>
       </p>
     </div>
   )
