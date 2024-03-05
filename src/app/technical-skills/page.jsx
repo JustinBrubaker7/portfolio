@@ -81,12 +81,12 @@ export default function TechnicalSkills() {
   return (
     <SimpleLayout
       title="Technical Skills"
-      intro="I have experience with a wide range of technologies and tools with a focus on the Javascript ecosystem but continuing to grow in new ways. Here is an exhaustive list of the languages, frameworks, tools, and tech I've used."
+      intro="I have experience with a wide range of technologies and tools with a focus on the Javascript ecosystem but continuing to grow in new ways. Here is a list of the languages, frameworks, tools, and tech I've used."
     >
       <SearchBox allTerms={Object.values(categories).flat()} />
       <div>
         {Object.entries(categories).map(([category, technologies]) => (
-          <div key={category} className="mb-12 flex flex-col gap-2">
+          <div key={category} className="mb-16 flex flex-col gap-2">
             <h2 className="tracking-tigh mt-4 text-2xl font-semibold text-gray-800 dark:text-gray-200 sm:text-2xl lg:text-3xl">
               {category}
             </h2>
