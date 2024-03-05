@@ -87,7 +87,7 @@ export default function TechnicalSkills() {
       <div>
         {Object.entries(categories).map(([category, technologies]) => (
           <div key={category} className="mb-12 flex flex-col gap-2">
-            <h2 className="my-4 text-2xl font-bold tracking-tight text-gray-800 dark:text-gray-200 sm:text-3xl lg:text-4xl">
+            <h2 className="tracking-tigh mt-4 text-2xl font-semibold text-gray-800 dark:text-gray-200 sm:text-2xl lg:text-3xl">
               {category}
             </h2>
             <ul

@@ -28,7 +28,7 @@ const SearchBox = ({ allTerms }) => {
           setSearchTerm(e.target.value)
           onSearch(e.target.value)
         }}
-        className="float-right w-1/3 rounded-full border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-800"
+        className=" w-1/3 rounded-full border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-800"
       />
       <ul className="my-2 ml-4 flex flex-wrap gap-2">
         {filteredTerms?.length > 0 &&
