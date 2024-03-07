@@ -33,7 +33,13 @@ This project was my first real hands-on experience with embedding models and vec
 
 In this post, I'm going to walk you through what I learned about vector databases and why they're pretty awesome for managing and using data in new ways.
 
----
+<iframe
+  src="https://res.cloudinary.com/dgcg1kqls/video/upload/v1709779134/Untitled_video_zf5dwy.mp4"
+  id="responsiveIframe"
+  frameborder="0"
+  allowfullscreen=""
+  title="Embedded post"
+></iframe>
 
 ## What is a Vector Database?
 
@@ -64,6 +70,14 @@ Time to roll up our sleeves and dig a bit deeper into the world of vectors. This
 ### Vectors: The DNA of Data
 
 In the simplest terms, a vector in our context is a series of numbers representing data. But it's not just any data; it's data that's been through the gym of machine learning models. These models, like those used in AI, take raw data (like text from the Bible) and convert it into a numerical format that captures its essence – its meaning, tone, context, and even the nuances in between.
+
+```javascript
+// This string of text becomes
+Gal 5:25 Since we live by the Spirit, let us keep in step with the Spirit
+
+// Example of a vector (minified for brevity)
+0.00410357676,-0.0356313549,0.00230312115,-0.00108453853,0.0128194885,-0.000229436249,-0.0195216928,0.0107052485,0.0140746292,-0.0236405022,-0.00757958367,0.00233358564,0.00442040851,-0.0203381442,0.00737851765,-0.0110038007,0.035022065,-0.0138552841,0.0384340957,-0.00343944924,-0.00594059,0.00613860972,0.0026245222,-0.0170235988,-0.0282711163,-0.0161096621,0.00782330055,-0.0329992175,0.00945620053,-0.0486945584,-0.00396343973,-0.0251271725,-0.0059375437,-0.0149032651,-0.0138065405,-0.0271012764
+```
 
 ### Why Numerical?
 
@@ -144,3 +158,7 @@ Up next, let's dive into the specifics of the project – vectorizing the Bible 
 ## Project Overview: Vectorizing the Bible
 
 This project is still in progress and im currently building it out. As I complete the build out I will update this article with the results and the code.
+
+Feel free to play around with the search page and see how you like it.
+
+[Bible Semantic Search](https://vector.justinbrubaker.dev/)

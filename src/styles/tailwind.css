@@ -28,3 +28,22 @@
     transform: translateY(-10px);
   }
 }
+
+#responsiveIframe {
+  position: relative;
+
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  min-height: 260px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Add a media query for medium screens and larger ot change the min eight */
+@media (min-width: 768px) {
+  #responsiveIframe {
+    min-height: 360px;
+  }
+}
