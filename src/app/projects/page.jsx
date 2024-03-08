@@ -4,7 +4,7 @@ import { ProjectCard } from '@/components/ProjectCard'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import logoAnimaginary from '@/images/logos/animaginary.svg'
 import SparkLogo from '@/images/logos/Spark.jpg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
+import logoHelioStream from '@/images/logos/B.png'
 import PowerGPTLogo from '@/images/logos/PowerGPT.png'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 

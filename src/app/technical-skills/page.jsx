@@ -34,6 +34,7 @@ const categories = {
     'Shopify Liquid',
     'Shopify Hydrogen',
     'SASS',
+    'Remix',
   ],
   Databases: [
     'MySQL',
@@ -80,7 +81,6 @@ const categories = {
     'Salesforce',
     "Salesforce API's",
     'Server Side Rendering (SSR)',
-    'Remix',
     'SOQL (Salesforce Object Query Language)',
   ],
 }
