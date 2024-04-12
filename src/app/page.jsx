@@ -15,6 +15,7 @@ import logoReact from '@/images/logos/icons/React.png'
 import logoNode from '@/images/logos/icons/nodeJS2.png'
 import TCLogo from '@/images/logos/TC.jpg'
 import logoBytrek from '@/images/logos/bytrek.png'
+import logoSCP from '@/images/logos/SCP.png'
 import MYSQLLogo from '@/images/logos/icons/MYSQL.png'
 import JavaScript from '@/images/logos/icons/Javascript.png'
 import image1 from '@/images/photos/image-1.jpg'
@@ -236,12 +237,22 @@ function Role({ role }) {
 function Resume() {
   let resume = [
     {
+      company: 'Salem Church Products',
+      title: 'Engineering Manager',
+      logo: logoSCP,
+      start: '2024',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
       company: 'Bytrek LLC',
       title: 'Tech Lead and Senior Engineer',
       logo: logoBytrek,
       start: '2022',
       end: {
-        label: 'Present',
+        label: '2024',
         dateTime: new Date().getFullYear().toString(),
       },
     },
@@ -276,7 +287,7 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="https://drive.google.com/file/d/1ofDftjXxsFIp_-xx-7q-4SKGHHSGLo9_/view?usp=sharing"
+        href="https://drive.google.com/file/d/1GAGco58XPcAzIzKxHdet66Ew4Y6a9NV6/view?usp=sharing"
         variant="secondary"
         className="group mt-6 w-full"
         target="_blank"
